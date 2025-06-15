@@ -1,14 +1,15 @@
 import React, { useState } from "react";
+import { Link } from "react-scroll";
 import "./Navbar.css";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
 
   const navLinks = [
-    { name: "Home", href: "#hero" },
-    { name: "About", href: "#about" },
-    { name: "Projects", href: "#projects" },
-    { name: "Contact", href: "#contact" },
+    { name: "Home", to: "hero" },
+    { name: "About", to: "about" },
+    { name: "Projects", to: "projects" },
+    { name: "Contact", to: "contact" },
   ];
 
   return (
@@ -18,13 +19,17 @@ const Navbar = () => {
         <ul className="navbar-links">
           {navLinks.map((link) => (
             <li key={link.name}>
-              <a
-                href={link.href}
+              <Link
+                to={link.to}
+                smooth={true}
+                duration={500}
+                offset={-70}
                 className={active === link.name ? "active" : ""}
-                onClick={() => setActive(link.name)}
+                onSetActive={() => setActive(link.name)}
+                spy={true}
               >
                 {link.name}
-              </a>
+              </Link>
             </li>
           ))}
         </ul>

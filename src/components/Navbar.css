@@ -52,6 +52,7 @@
 
 .navbar-links a:hover {
   color: #0077cc;
+  cursor: pointer;
 }
 
 .navbar-links a:hover::after {

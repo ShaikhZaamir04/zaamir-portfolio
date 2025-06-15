@@ -2,9 +2,9 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 100vh;
   padding: 2rem;
-  background: linear-gradient(135deg, #f8fbff, #ffffff);
+  background: linear-gradient(135deg, #ffffff, #f0f4ff);
   text-align: center;
   animation: fadeIn 1.5s ease-in-out;
 }
@@ -17,34 +17,44 @@
   font-size: 3rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #222;
+  color: #1e2761;
 }
 
 .hero-subtitle {
   font-size: 1.2rem;
-  color: #555;
+  color: #3b3b3b;
   margin-bottom: 2rem;
   line-height: 1.6;
 }
 
 .hero-subtitle span {
-  color: #0077cc;
+  color: #408EC6;
   font-weight: 600;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
 }
 
 .hero-button {
   display: inline-block;
   padding: 0.75rem 1.5rem;
-  background-color: #0077cc;
+  background: linear-gradient(to right, #408EC6, #7A2048);
   color: #fff;
-  border-radius: 8px;
-  font-weight: 500;
+  border: none;
+  border-radius: 12px;
+  font-weight: 600;
   text-decoration: none;
-  transition: background-color 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
 }
 
 .hero-button:hover {
-  background-color: #005fa3;
+  transform: translateY(-4px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Entrance Animation */

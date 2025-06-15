@@ -1,20 +1,31 @@
 .footer {
   padding: 30px 20px;
-  background: #1E2761;
-  color: white;
+  background-color: #e0effa;
+  color: #333;
   text-align: center;
   font-size: 0.95rem;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  z-index: 1;
+}
+
+.footer p {
+  margin: 0;
+  opacity: 0.85;
 }
 
 .back-to-top {
   display: inline-block;
   margin-top: 10px;
-  color: #408EC6;
+  color: #333;
   text-decoration: none;
   font-weight: 500;
+  border-bottom: 1px dashed transparent;
+  transition: color 0.3s ease, border-bottom 0.3s ease;
 }
 
 .back-to-top:hover {
-  color: #fff;
+  color: #333;
+  border-bottom: 1px dashed #333;
+  transform: translateY(-2px);
 }

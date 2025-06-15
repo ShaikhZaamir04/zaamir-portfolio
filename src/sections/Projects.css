@@ -1,35 +1,36 @@
 .projects-section {
-  padding: 80px 40px;
-  background: #fff;
+  padding: 30px 40px;
+  background: linear-gradient(to bottom, #ffffff, #f3f6fb);
   color: #222;
+  padding-bottom: 50px;
 }
 
 .projects-heading {
-  margin-top: 30px;
   font-size: 2.5rem;
   text-align: center;
   margin-bottom: 40px;
+  color: #1E2761;
 }
 
 .projects-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Only 3 cards per row */
+  grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
 .project-card {
-  background-color: rgba(255, 255, 255, 0.05);
+  background: linear-gradient(to top right, #ffffff, #f1f6fc);
   border-radius: 16px;
   overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   transform-style: preserve-3d;
   perspective: 1000px;
 }
 
 .project-card:hover {
-  transform: scale(1.03) rotateX(3deg) rotateY(3deg);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transform: scale(1.5) rotateX(3deg) rotateY(3deg);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.396);
 }
 
 .project-image {
@@ -45,11 +46,13 @@
 .project-content h3 {
   margin: 0 0 10px;
   font-size: 1.4rem;
+  color: #1E2761;
 }
 
 .project-content p {
   font-size: 0.95rem;
   margin-bottom: 15px;
+  color: #444;
 }
 
 .tech-tags {
@@ -57,21 +60,22 @@
 }
 
 .tech-tag {
-  background: #408EC6;
-  /* Blue theme */
-  color: #fff;
+  background: #e0effa;
+  color: #1E2761;
   padding: 6px 14px;
   border-radius: 20px;
-  font-size: 0.8rem;
-  margin: 4px 8px 4px 0;
+  font-size: 0.9rem;
+  margin: 4px 10px 4px 0;
   display: inline-block;
-  transition: background 0.3s, transform 0.3s;
+  transition: all 0.3s ease;
 }
 
 .tech-tag:hover {
-  background: #7A2048;
-  transform: scale(1.1);
+  background: linear-gradient(to right, #408EC6, #7A2048);
+  color: #fff;
+  transform: scale(1.05);
   cursor: pointer;
+  transition: color 0.3s;
 }
 
 .project-links a {
@@ -79,9 +83,11 @@
   color: #0077cc;
   text-decoration: none;
   font-weight: 500;
+  transition: color 0.3s;
 }
 
 .project-links a:hover {
+  color: #005fa3;
   text-decoration: underline;
 }
 
@@ -94,12 +100,14 @@
   align-items: center;
   height: 200px;
   flex-direction: column;
-  transition: transform 0.3s ease;
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
 }
 
 .coming-soon h3 {
   font-size: 1.6rem;
   margin-bottom: 10px;
+  color: #ddd;
 }
 
 .coming-soon p {
@@ -108,5 +116,6 @@
 }
 
 .coming-soon:hover {
-  transform: scale(1.03);
+  transition: transform 0.3s ease;
+  transform: scale(1.08);
 }

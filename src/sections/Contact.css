@@ -1,18 +1,21 @@
 .contact-section {
-  padding: 80px 40px;
-  background: linear-gradient(to bottom, #408EC6, #7A2048);
-  color: white;
+  padding: 40px 40px;
+  background: linear-gradient(to bottom, #ffffff, #f3f6fb);
+  color: #1E2761;
   text-align: center;
+    padding-bottom: 80px;
 }
 
 .contact-container h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
+  color: #1E2761;
 }
 
 .contact-text {
   font-size: 1.1rem;
   margin-bottom: 30px;
+  color: #555;
 }
 
 .contact-methods {
@@ -29,35 +32,57 @@
   border-radius: 12px;
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   font-size: 1.1rem;
   text-decoration: none;
-  color: white;
-  transition: 0.3s ease;
+  color: #0077cc;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
 }
 
 .contact-card:hover {
-  transform: translateY(-5px);
-  background-color: rgba(255, 255, 255, 0.2);
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .contact-card .icon {
   font-size: 1.5rem;
 }
 
-.social-icons {
-  margin-top: 20px;
+.contact-form {
+  max-width: 500px;
+  padding-top: 30px;
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 25px;
 }
 
-.social-icons img {
-  width: 30px;
-  height: 30px;
-  transition: transform 0.3s ease;
+.contact-form input,
+.contact-form textarea {
+  padding: 12px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fff;
+  color: #333;
 }
 
-.social-icons img:hover {
-  transform: scale(1.2);
+.contact-form textarea {
+  resize: vertical;
+}
+
+.contact-form button {
+  padding: 12px;
+  background: linear-gradient(to right, #1E2761, #408EC6);
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-form button:hover {
+  background: linear-gradient(to right, #7A2048, #1E2761);
 }
