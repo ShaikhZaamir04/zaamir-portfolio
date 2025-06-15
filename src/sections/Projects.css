@@ -1,0 +1,112 @@
+.projects-section {
+  padding: 80px 40px;
+  background: #fff;
+  color: #222;
+}
+
+.projects-heading {
+  margin-top: 30px;
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* Only 3 cards per row */
+  gap: 30px;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  perspective: 1000px;
+}
+
+.project-card:hover {
+  transform: scale(1.03) rotateX(3deg) rotateY(3deg);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.project-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.project-content {
+  padding: 20px;
+}
+
+.project-content h3 {
+  margin: 0 0 10px;
+  font-size: 1.4rem;
+}
+
+.project-content p {
+  font-size: 0.95rem;
+  margin-bottom: 15px;
+}
+
+.tech-tags {
+  margin-bottom: 15px;
+}
+
+.tech-tag {
+  background: #408EC6;
+  /* Blue theme */
+  color: #fff;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  margin: 4px 8px 4px 0;
+  display: inline-block;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.tech-tag:hover {
+  background: #7A2048;
+  transform: scale(1.1);
+  cursor: pointer;
+}
+
+.project-links a {
+  margin-right: 15px;
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.project-links a:hover {
+  text-decoration: underline;
+}
+
+.coming-soon {
+  background: linear-gradient(135deg, #1E2761, #7A2048);
+  color: white;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  flex-direction: column;
+  transition: transform 0.3s ease;
+}
+
+.coming-soon h3 {
+  font-size: 1.6rem;
+  margin-bottom: 10px;
+}
+
+.coming-soon p {
+  font-size: 0.95rem;
+  color: #ddd;
+}
+
+.coming-soon:hover {
+  transform: scale(1.03);
+}

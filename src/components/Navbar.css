@@ -1,0 +1,63 @@
+.navbar {
+  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: #ffffff;
+  border-bottom: 1px solid #eaeaea;
+  box-shadow: 0 1px 10px rgba(0, 0, 0, 0.04);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar-logo {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #222;
+  font-family: "Segoe UI", sans-serif;
+}
+
+.navbar-links {
+  list-style: none;
+  display: flex;
+  gap: 3rem;
+}
+
+.navbar-links a {
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 1.3rem;
+  color: #444;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.navbar-links a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  background-color: #0077cc;
+  left: 0;
+  bottom: -5px;
+  transition: width 0.3s ease;
+}
+
+.navbar-links a:hover {
+  color: #0077cc;
+}
+
+.navbar-links a:hover::after {
+  width: 100%;
+}
+
+.navbar-links .active {
+  color: #0077cc;
+}

@@ -1,0 +1,20 @@
+.footer {
+  padding: 30px 20px;
+  background: #1E2761;
+  color: white;
+  text-align: center;
+  font-size: 0.95rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.back-to-top {
+  display: inline-block;
+  margin-top: 10px;
+  color: #408EC6;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.back-to-top:hover {
+  color: #fff;
+}
