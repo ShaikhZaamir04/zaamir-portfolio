@@ -8,6 +8,7 @@ const Navbar = () => {
   const navLinks = [
     { name: "Home", to: "hero" },
     { name: "About", to: "about" },
+    { name: "Skills", to: "skills" },
     { name: "Projects", to: "projects" },
     { name: "Contact", to: "contact" },
   ];
@@ -15,7 +16,7 @@ const Navbar = () => {
   return (
     <nav className="navbar">
       <div className="navbar-container">
-        <div className="navbar-logo">Zaamir Shaikh</div>
+        <div className="navbar-logo">My Portfolio</div>
         <ul className="navbar-links">
           {navLinks.map((link) => (
             <li key={link.name}>

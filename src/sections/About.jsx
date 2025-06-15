@@ -8,28 +8,25 @@ const About = () => {
         <div className="about-text">
           <h2>About Me</h2>
           <p>
-            I'm a passionate Full Stack Developer with 3+ years of freelance experience.
-            I specialize in building responsive websites, modern web apps, and immersive
-            game experiences. My core strengths lie in React, Unity3D, and creating
-            performance-optimized solutions for clients worldwide.
+            I'm <strong>Zaamir</strong>, a dedicated <strong>Full Stack Developer</strong> and <strong>Game Developer</strong> with 3+ years of experience in freelancing.
+            I specialize in building <strong>responsive web apps</strong>, <strong>eCommerce platforms</strong>, and <strong>immersive Unity-based games</strong>.
+          </p>
+          <p>
+            My strengths include working with <strong>React, Node.js, Unity 3D, Firebase, and MongoDB</strong>. I focus on clean code, fast performance, and delivering exceptional user experiences.
+            I’ve collaborated with international clients and consistently received 5-star reviews for communication, quality, and timely delivery.
           </p>
 
-          <h3>Skills:</h3>
-          <ul className="skills-list">
-            <li className="skill-item">React</li>
-            <li className="skill-item">JavaScript</li>
-            <li className="skill-item">Unity 3D</li>
-            <li className="skill-item">C# / C++</li>
-            <li className="skill-item">Node.js</li>
-            <li className="skill-item">Shopify / WordPress</li>
-            <li className="skill-item">MongoDB / Firebase</li>
-            <li className="skill-item">SEO Optimization</li>
+          <h3>Values I Follow</h3>
+          <ul className="values-list">
+            <li className="value-item">⚡ Fast Delivery</li>
+            <li className="value-item">✅ Clean, Maintainable Code</li>
+            <li className="value-item">🤝 Client-Centric Approach</li>
           </ul>
         </div>
 
         <div className="about-image">
           <img
-            src="https://avatars.githubusercontent.com/u/12247465?v=4"
+            src="https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/user-avatar/png/27.png"
             alt="Zaamir Avatar"
           />
         </div>

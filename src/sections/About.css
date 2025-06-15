@@ -1,7 +1,6 @@
 .about-section {
-  padding: 40px 20px;
+  padding: 30px 20px;
   background: linear-gradient(to bottom right, #ffffff, #f3f6fb);
-  padding-bottom: 80px;
 }
 
 .about-container {
@@ -12,11 +11,12 @@
   align-items: center;
   justify-content: space-between;
   gap: 40px;
+  margin-bottom: 30px;
 }
 
 .about-text {
   flex: 1;
-  min-width: 300px;
+  min-width: 320px;
 }
 
 .about-text h2 {
@@ -28,40 +28,39 @@
 .about-text p {
   font-size: 1.1rem;
   color: #3d3d3d;
-  line-height: 1.6;
+  line-height: 1.8;
+  margin-bottom: 20px;
 }
 
 .about-text h3 {
-  margin-top: 30px;
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #1E2761;
+  margin-top: 20px;
+  margin-bottom: 10px;
 }
 
-.skills-list {
+.values-list {
   list-style: none;
   padding: 0;
-  margin: 1.5rem 0 0;
+  margin: 0;
   display: flex;
   flex-wrap: wrap;
   gap: 15px;
 }
 
-.skill-item {
-  padding: 1rem 2rem;
-  background: linear-gradient(to right, #eaf3fb, #ffffff);
-  border-radius: 12px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  font-weight: 600;
+.value-item {
+  padding: 0.75rem 1.5rem;
+  background: #eaf3fb;
+  border-radius: 10px;
+  font-weight: 500;
   color: #1E2761;
-  cursor: default;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  transition: all 0.3s ease;
 }
 
-.skill-item:hover {
-  transform: translateY(-6px) scale(1.05);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+.value-item:hover {
   background: linear-gradient(135deg, #408EC6, #7A2048);
-  color: #fff;
+  color: white;
 }
 
 .about-image {
@@ -72,7 +71,7 @@
 }
 
 .about-image img {
-  width: 250px;
+  width: 240px;
   border-radius: 50%;
   box-shadow: 0 8px 24px rgba(64, 142, 198, 0.2);
   transition: transform 0.4s ease;
@@ -80,5 +79,4 @@
 
 .about-image img:hover {
   transform: scale(1.05);
-  transition: transform 0.4s ease;
 }

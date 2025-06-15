@@ -33,6 +33,7 @@
 }
 
 .hero-buttons {
+  cursor: pointer;
   display: flex;
   justify-content: center;
   gap: 20px;
