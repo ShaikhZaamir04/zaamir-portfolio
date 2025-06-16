@@ -12,7 +12,7 @@ const Contact = () => {
         </p>
 
         <div className="contact-methods">
-          <a href="https://wa.me/919876543210" target="_blank" className="contact-card whatsapp">
+          <a href="https://wa.me/9820537797" target="_blank" className="contact-card whatsapp">
             <FaWhatsapp className="icon" />
             <span>WhatsApp</span>
           </a>
