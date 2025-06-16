@@ -10,7 +10,7 @@ import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import Skills from './sections/Skills';
 
-ReactGA.initialize('G-E6K75L5K0N'); // Replace with your GA4 ID
+ReactGA.initialize('G-GFPJZR3GR5'); // Replace with your GA4 ID
 
 const App = () => {
   useEffect(() => {
