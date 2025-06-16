@@ -63,8 +63,12 @@
   color: #0077cc;
 }
 
-/* ===== Responsive Mobile Styles ===== */
+/* ============================= */
+/* === Responsive Mobile Nav === */
+/* ============================= */
 @media (max-width: 768px) {
+
+  /* Mobile nav panel hidden by default */
   .navbar-links {
     position: absolute;
     top: 100%;
@@ -72,18 +76,25 @@
     width: 100%;
     flex-direction: column;
     background-color: #fff;
-    padding: 1rem 2rem;
+    padding: 2rem;
     gap: 1.5rem;
-    display: none;
+    transform: translateY(-20px);
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.4s ease;
     border-top: 1px solid #ddd;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    z-index: 101;
   }
 
   .navbar-links.open {
     display: flex;
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
   }
 
-  /* Hamburger Icon + Morph */
+  /* Hamburger Icon */
   .menu-toggle {
     display: flex;
     flex-direction: column;
@@ -91,7 +102,6 @@
     gap: 6px;
     cursor: pointer;
     z-index: 110;
-    /* above nav */
   }
 
   .menu-toggle span {
@@ -114,37 +124,38 @@
     transform: rotate(-45deg) translate(6px, -6px);
   }
 
-  /* Mobile Nav Styles */
-  @media (max-width: 768px) {
-    .navbar-links {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      flex-direction: column;
-      background-color: #fff;
-      padding: 2rem;
-      gap: 1.5rem;
-      display: none;
-      border-top: 1px solid #ddd;
-      transform: translateY(-20px);
+  /* Dark overlay when menu is open */
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 90;
+  }
+
+  /* Staggered fade-in animation */
+  @keyframes fadeInLinks {
+    from {
       opacity: 0;
-      pointer-events: none;
-      transition: all 0.4s ease;
+      transform: translateY(-10px);
     }
 
-    .navbar-links.open {
-      display: flex;
-      transform: translateY(0);
+    to {
       opacity: 1;
-      pointer-events: auto;
+      transform: translateY(0);
     }
   }
 
-  /* Desktop: hide toggle */
-  @media (min-width: 769px) {
-    .menu-toggle {
-      display: none;
-    }
+  .fade-in {
+    animation: fadeInLinks 0.4s ease forwards;
+  }
+}
+
+/* Desktop: hide toggle */
+@media (min-width: 769px) {
+  .menu-toggle {
+    display: none;
   }
 }

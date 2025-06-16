@@ -31,10 +31,17 @@ const Navbar = () => {
           <span></span>
         </div>
 
-        {/* Navigation Links */}
+        {/* Overlay */}
+        {isOpen && <div className="overlay" onClick={toggleMenu}></div>}
+
+        {/* Mobile Navigation */}
         <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
-          {navLinks.map((link) => (
-            <li key={link.name}>
+          {navLinks.map((link, index) => (
+            <li
+              key={link.name}
+              style={{ animationDelay: `${index * 0.1}s` }}
+              className={isOpen ? "fade-in" : ""}
+            >
               <Link
                 to={link.to}
                 smooth={true}
@@ -42,7 +49,7 @@ const Navbar = () => {
                 offset={-70}
                 className={active === link.name ? "active" : ""}
                 onSetActive={() => setActive(link.name)}
-                onClick={() => setIsOpen(false)} // close on link click
+                onClick={() => setIsOpen(false)}
                 spy={true}
               >
                 {link.name}
