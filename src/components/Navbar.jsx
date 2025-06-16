@@ -4,6 +4,9 @@ import "./Navbar.css";
 
 const Navbar = () => {
   const [active, setActive] = useState("");
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleMenu = () => setIsOpen(!isOpen);
 
   const navLinks = [
     { name: "Home", to: "hero" },
@@ -17,7 +20,19 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
         <div className="navbar-logo">My Portfolio</div>
-        <ul className="navbar-links">
+
+        {/* Hamburger Icon */}
+        <div
+          className={`menu-toggle ${isOpen ? "open" : ""}`}
+          onClick={toggleMenu}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+
+        {/* Navigation Links */}
+        <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
           {navLinks.map((link) => (
             <li key={link.name}>
               <Link
@@ -27,6 +42,7 @@ const Navbar = () => {
                 offset={-70}
                 className={active === link.name ? "active" : ""}
                 onSetActive={() => setActive(link.name)}
+                onClick={() => setIsOpen(false)} // close on link click
                 spy={true}
               >
                 {link.name}
