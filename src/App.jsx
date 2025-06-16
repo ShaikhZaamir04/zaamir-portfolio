@@ -56,7 +56,6 @@ const App = () => {
 
       <Analytics />
 
-
       <Navbar />
       <Hero />
       <About />
