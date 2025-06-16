@@ -17,41 +17,46 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="navbar">
+    <nav className="navbar" role="navigation" aria-label="Main Navigation">
       <div className="navbar-container">
 
-        <div className="navbar-logo">Z.S</div>
+        {/* Logo */}
+        <div className="navbar-logo" onClick={() => setActive("Home")}>
+          Z.S
+        </div>
 
-        {/* Hamburger Icon */}
-        <div
+        {/* Hamburger Menu Toggle */}
+        <button
           className={`menu-toggle ${isOpen ? "open" : ""}`}
           onClick={toggleMenu}
+          aria-label="Toggle navigation menu"
+          aria-expanded={isOpen}
         >
           <span></span>
           <span></span>
           <span></span>
-        </div>
+        </button>
 
-        {/* Overlay */}
+        {/* Click-away Overlay */}
         {isOpen && <div className="overlay" onClick={toggleMenu}></div>}
 
-        {/* Mobile Navigation */}
+        {/* Navigation Links */}
         <ul className={`navbar-links ${isOpen ? "open" : ""}`}>
           {navLinks.map((link, index) => (
             <li
               key={link.name}
               style={{ animationDelay: `${index * 0.1}s` }}
-              className={isOpen ? "fade-in" : ""}
+              className={`nav-item ${isOpen ? "fade-in" : ""}`}
             >
               <Link
                 to={link.to}
+                spy={true}
                 smooth={true}
                 duration={500}
                 offset={-70}
                 className={active === link.name ? "active" : ""}
                 onSetActive={() => setActive(link.name)}
                 onClick={() => setIsOpen(false)}
-                spy={true}
               >
                 {link.name}
               </Link>

@@ -1,8 +1,59 @@
-import React from "react";
+import React, { useState } from "react";
 import "./Contact.css";
 import { FaWhatsapp, FaEnvelope, FaLinkedin, FaStore } from "react-icons/fa";
+import ReactGA from "react-ga4";
 
 const Contact = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    message: ""
+  });
+
+  const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false); // ✅ loading state
+
+  const handleChange = (e) => {
+    setFormData((prev) => ({
+      ...prev,
+      [e.target.name]: e.target.value
+    }));
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    setLoading(true); // ✅ Start loading
+
+    // ✅ Google Analytics Event
+    ReactGA.event({
+      category: "Contact",
+      action: "Form Submitted",
+      label: "Contact Section Form"
+    });
+
+    try {
+      const response = await fetch("https://formspree.io/f/xwpbbbrz", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json"
+        },
+        body: JSON.stringify(formData)
+      });
+
+      if (response.ok) {
+        setSubmitted(true);
+        setFormData({ name: "", email: "", message: "" });
+      } else {
+        alert("Form submission failed. Please try again.");
+      }
+    } catch (err) {
+      alert("Something went wrong. Please try again later.");
+    } finally {
+      setLoading(false); // ✅ Stop loading
+    }
+  };
+
   return (
     <section id="contact" className="contact-section">
       <div className="contact-container">
@@ -33,18 +84,35 @@ const Contact = () => {
           </a>
         </div>
 
-        <form
-          action="https://formspree.io/f/xwpbbbrz"
-          method="POST"
-          className="contact-form"
-        >
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea name="message" rows="5" placeholder="Your Message" required />
-          <button type="submit">Send Message</button>
+        <form className="contact-form" onSubmit={handleSubmit}>
+          <input
+            type="text"
+            name="name"
+            placeholder="Your Name"
+            value={formData.name}
+            onChange={handleChange}
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            placeholder="Your Email"
+            value={formData.email}
+            onChange={handleChange}
+            required
+          />
+          <textarea
+            name="message"
+            rows="5"
+            placeholder="Your Message"
+            value={formData.message}
+            onChange={handleChange}
+            required
+          />
+          <button type="submit" disabled={loading}>
+            {loading ? "Sending..." : submitted ? "Message Sent ✅" : "Send Message"}
+          </button>
         </form>
-
-
       </div>
     </section>
   );
