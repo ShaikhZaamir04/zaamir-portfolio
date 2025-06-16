@@ -9,28 +9,32 @@ const SEO = ({
 }) => {
   return (
     <Helmet>
-      {/* General Tags */}
+      {/* Document Language & Charset */}
       <html lang="en" />
       <meta charSet="utf-8" />
       <title>{title}</title>
+
+      {/* SEO Meta */}
       <meta name="description" content={description} />
       <link rel="canonical" href={url} />
 
       {/* Favicon */}
       <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
 
-      {/* Open Graph Tags */}
+      {/* Open Graph (Facebook, LinkedIn, WhatsApp) */}
       <meta property="og:type" content="website" />
       <meta property="og:title" content={title} />
       <meta property="og:description" content={description} />
       <meta property="og:image" content={image} />
+      <meta property="og:image:alt" content="Zaamir Portfolio OG Image" />
       <meta property="og:url" content={url} />
 
-      {/* Twitter Tags */}
+      {/* Twitter Meta */}
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={title} />
       <meta name="twitter:description" content={description} />
       <meta name="twitter:image" content={image} />
+      <meta name="twitter:image:alt" content="Zaamir Portfolio Twitter Card" />
     </Helmet>
   );
 };
