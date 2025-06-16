@@ -10,8 +10,11 @@
 }
 
 .footer p {
-  margin: 0;
   opacity: 0.85;
+}
+
+.footer-copyright{
+margin-top: 5px;
 }
 
 .back-to-top {
