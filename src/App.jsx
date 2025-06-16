@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga4';
-import { Analytics } from '@vercel/analytics/next';
 
 import SEO from './components/SEO';
 import Navbar from './components/Navbar';
@@ -53,9 +52,6 @@ const App = () => {
         image="https://zaamir-portfolio.vercel.app/og-image.png"
         url="https://zaamir-portfolio.vercel.app/"
       />
-
-      <Analytics />
-
       <Navbar />
       <Hero />
       <About />
