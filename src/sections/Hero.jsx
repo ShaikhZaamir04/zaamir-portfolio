@@ -7,9 +7,9 @@ import "./Hero.css";
 const Hero = () => {
   const handleResumeClick = () => {
     ReactGA.event({
-      category: "Resume",
-      action: "Viewed Resume",
-      label: "Hero Section Resume Button",
+      category: "interaction",
+      action: "click_resume",
+      label: "hero_section_resume_button",
     });
   };
 
