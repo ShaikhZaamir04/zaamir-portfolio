@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react';
 import ReactGA from 'react-ga4';
-import SEO from './components/SEO';
+import { Analytics } from '@vercel/analytics/next';
 
+import SEO from './components/SEO';
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -53,6 +54,9 @@ const App = () => {
         url="https://zaamir-portfolio.vercel.app/"
       />
 
+      <Analytics />
+
+
       <Navbar />
       <Hero />
       <About />
@@ -60,6 +64,7 @@ const App = () => {
       <Projects />
       <Contact />
       <Footer />
+
     </>
   );
 };
