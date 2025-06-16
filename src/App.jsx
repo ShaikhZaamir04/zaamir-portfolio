@@ -1,12 +1,18 @@
 import { Helmet } from "react-helmet";
+import { Suspense, lazy } from "react";
+import Loader from "./components/Loader";
+
 import Navbar from "./components/Navbar";
-import About from "./sections/About";
-import Contact from "./sections/Contact";
 import Hero from "./sections/Hero";
-import Projects from "./sections/Projects";
 import Footer from "./components/Footer";
-import Testimonials from "./components/Testimonials";
-import Skills from "./sections/Skills";
+
+// Lazy load heavy sections
+const About = lazy(() => import("./sections/About"));
+const Skills = lazy(() => import("./sections/Skills"));
+const Projects = lazy(() => import("./sections/Projects"));
+const Testimonials = lazy(() => import("./components/Testimonials"));
+const Contact = lazy(() => import("./sections/Contact"));
+
 
 function App() {
   return (
@@ -60,11 +66,15 @@ function App() {
 
       <Navbar />
       <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Testimonials />
-      <Contact />
+
+      <Suspense fallback={<Loader />}>
+        <About />
+        <Skills />
+        <Projects />
+        <Testimonials />
+        <Contact />
+      </Suspense>
+
       <Footer />
     </>
   );

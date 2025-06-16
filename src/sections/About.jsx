@@ -28,6 +28,7 @@ const About = () => {
           <img
             src="https://d8it4huxumps7.cloudfront.net/uploads/images/unstop/user-avatar/png/27.png"
             alt="Zaamir Avatar"
+            loading="lazy"
           />
         </div>
       </div>
