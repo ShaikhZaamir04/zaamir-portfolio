@@ -12,22 +12,22 @@ const Contact = () => {
         </p>
 
         <div className="contact-methods">
-          <a href="https://wa.me/9820537797" target="_blank" className="contact-card whatsapp">
+          <a href="https://wa.me/9819240792" target="_blank" className="contact-card whatsapp">
             <FaWhatsapp className="icon" />
             <span>WhatsApp</span>
           </a>
 
-          <a href="mailto:zaamir.webdev@gmail.com" className="contact-card email">
+          <a href="mailto:shaikhzaamir04@gmail.com" className="contact-card email">
             <FaEnvelope className="icon" />
             <span>Email</span>
           </a>
 
-          <a href="https://linkedin.com/in/zaamir04" target="_blank" className="contact-card linkedin">
+          <a href="https://www.linkedin.com/in/shaikh-zaamir/" target="_blank" className="contact-card linkedin">
             <FaLinkedin className="icon" />
             <span>LinkedIn</span>
           </a>
 
-          <a href="https://fiverr.com/yourusername" target="_blank" className="contact-card fiverr">
+          <a href="https://www.fiverr.com/zaamir_shaikh" target="_blank" className="contact-card fiverr">
             <FaStore className="icon" />
             <span>Fiverr</span>
           </a>
