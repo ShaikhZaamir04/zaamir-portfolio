@@ -6,7 +6,7 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "Responsive React-based portfolio to showcase my skills and projects.",
-    tech: ["React", "Framer Motion", "Vite"],
+    tech: ["React", "Vite", "Framer Motion"],
     github: "https://zaamir-portfolio.vercel.app/",
   },
   {
