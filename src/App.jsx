@@ -2,7 +2,6 @@ import React, { useEffect } from 'react';
 import ReactGA from 'react-ga4';
 import SEO from './components/SEO';
 
-// Import sections
 import Navbar from './components/Navbar';
 import Hero from './sections/Hero';
 import About from './sections/About';
@@ -11,15 +10,14 @@ import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import Skills from './sections/Skills';
 
-// Google Analytics
-ReactGA.initialize('G-E6K75L5K0N');
+ReactGA.initialize('G-E6K75L5K0N'); // Replace with your GA4 ID
 
 const App = () => {
   useEffect(() => {
-    // ✅ Track pageview on load
+    // Google Analytics: Track pageview on load
     ReactGA.send({ hitType: "pageview", page: window.location.pathname });
 
-    // ✅ Scroll analytics: track once when user scrolls 75% down
+    // 75% Scroll Event - GA4 + Clarity
     const handleScroll = () => {
       const scrollY = window.scrollY;
       const pageHeight = document.documentElement.scrollHeight - window.innerHeight;
@@ -27,11 +25,18 @@ const App = () => {
 
       if (scrollPercent >= 75 && !window.__scrollTracked) {
         window.__scrollTracked = true;
+
+        // Google Analytics
         ReactGA.event({
           category: "Scroll",
           action: "Scrolled 75%",
           label: "Main Page"
         });
+
+        // Microsoft Clarity
+        if (window.clarity) {
+          window.clarity("event", "scrolled_75_percent");
+        }
       }
     };
 

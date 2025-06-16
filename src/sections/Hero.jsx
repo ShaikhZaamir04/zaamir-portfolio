@@ -6,11 +6,17 @@ import "./Hero.css";
 
 const Hero = () => {
   const handleResumeClick = () => {
+    // Google Analytics
     ReactGA.event({
       category: "interaction",
       action: "click_resume",
       label: "hero_section_resume_button",
     });
+
+    // Microsoft Clarity
+    if (window.clarity) {
+      window.clarity("event", "click_resume");
+    }
   };
 
   return (
