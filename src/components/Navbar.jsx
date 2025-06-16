@@ -20,17 +20,7 @@ const Navbar = () => {
     <nav className="navbar">
       <div className="navbar-container">
 
-        <div className="navbar-logo" style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
-          <img
-            src="/favicon.svg"
-            alt="Logo"
-            width="40"
-            height="40"
-            style={{ borderRadius: "50%" }}
-          />
-          <span style={{ fontWeight: "700", fontSize: "1.4rem", color: "#222" }}></span>
-        </div>
-
+        <div className="navbar-logo">Z.S</div>
 
         {/* Hamburger Icon */}
         <div

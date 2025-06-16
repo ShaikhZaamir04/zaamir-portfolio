@@ -21,8 +21,10 @@
 .navbar-logo {
   font-size: 1.6rem;
   font-weight: 700;
-  color: #222;
   font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(90deg, #408EC6, #7A2048);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar-links {
