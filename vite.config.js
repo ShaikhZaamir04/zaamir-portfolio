@@ -1,34 +1,21 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
-import compression from 'vite-plugin-compression';
-import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
-  plugins: [
-    react(),
-    compression(), // Enable gzip compression
-    visualizer({ open: false }) // Set to true if you want to open stats report after build
-  ],
-  resolve: {
-    alias: {
-      '@': '/src', // Cleaner import paths: import x from '@/components/X'
-    },
-  },
+  plugins: [react()],
   build: {
-    target: 'es2020', // Better tree-shaking and smaller bundle
-    minify: 'esbuild', // Fastest and most effective for modern projects
-    cssCodeSplit: true,
-    assetsInlineLimit: 8192,
-    sourcemap: false,
-    rollupOptions: {
-      output: {
-        manualChunks: {
-          vendor: ['react', 'react-dom'], // Separate large libs
-        },
-      },
-    },
+    target: 'es2020', // Serve modern JS
+    minify: 'esbuild', // Fast minification
+    chunkSizeWarningLimit: 500, // Reduce chunk warning spam
+    assetsInlineLimit: 8192, // Inline small assets (8KB)
+    cssCodeSplit: true, // Split CSS for faster first paint
   },
   server: {
-    open: true, // Opens browser on localhost during dev
+    open: true, // Auto-open browser during local dev
+  },
+  resolve: {
+    alias: {
+      '@': '/src', // Optional: allows clean imports like "@/components/..."
+    },
   },
 });
