@@ -37,6 +37,7 @@
   display: flex;
   justify-content: center;
   gap: 20px;
+  align-items: center;
   flex-wrap: wrap;
 }
 
@@ -48,6 +49,7 @@
   border: none;
   border-radius: 12px;
   font-weight: 600;
+  min-width: 160px;
   text-decoration: none;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
@@ -107,6 +109,8 @@
   }
 
   .hero-button {
+    flex-direction: column;
+    gap: 15px;
     padding: 0.65rem 1.25rem;
     font-size: 0.95rem;
   }
