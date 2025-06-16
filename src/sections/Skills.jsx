@@ -29,7 +29,7 @@ const skillsData = [
     },
     {
         title: "Tools",
-        skills: ["Git", "GitHub"],
+        skills: ["Git", "GitHub", "Microsoft Clarity", "Google Analaytics"],
     },
     {
         title: "Additional Expertise",

@@ -6,20 +6,20 @@ const projects = [
   {
     title: "Portfolio Website",
     description: "Responsive React-based portfolio to showcase my skills and projects.",
-    tech: ["React", "Framer Motion", "CSS"],
-    github: "https://github.com/yourusername/portfolio",
+    tech: ["React", "Framer Motion", "Vite"],
+    github: "https://zaamir-portfolio.vercel.app/",
   },
   {
     title: "Unity 3D Game",
     description: "Immersive 3D adventure game built in Unity with C# scripting.",
     tech: ["Unity", "C#", "Blender"],
-    github: "https://github.com/yourusername/unitygame",
+    github: "https://www.fiverr.com/zaamir_shaikh/help-you-with-unity-projects",
   },
   {
-    title: "E-Commerce Store",
-    description: "Modern Shopify store with SEO optimization and clean UI.",
-    tech: ["Shopify", "Liquid", "SEO"],
-    github: "https://github.com/yourusername/shopify-store",
+    title: "Kyara Homepage",
+    description: "A clean and responsive homepage for Kyara Beverages, built using fundamental web development technologies.",
+    tech: ["HTML", "CSS", "JS"],
+    github: "https://shaikhzaamir04.github.io/kyara-homepage/",
   },
 ];
 
