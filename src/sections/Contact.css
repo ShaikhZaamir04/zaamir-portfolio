@@ -3,7 +3,7 @@
   background: linear-gradient(to bottom, #ffffff, #f3f6fb);
   color: #1E2761;
   text-align: center;
-    padding-bottom: 80px;
+  padding-bottom: 80px;
 }
 
 .contact-container h2 {
@@ -85,4 +85,66 @@
 
 .contact-form button:hover {
   background: linear-gradient(to right, #7A2048, #1E2761);
+}
+
+@media (max-width: 992px) {
+  .contact-section {
+    padding: 40px 30px 60px;
+  }
+
+  .contact-container h2 {
+    font-size: 2.2rem;
+  }
+
+  .contact-text {
+    font-size: 1rem;
+    margin-bottom: 25px;
+  }
+
+  .contact-card {
+    font-size: 1rem;
+    padding: 12px 20px;
+  }
+
+  .contact-card .icon {
+    font-size: 1.3rem;
+  }
+
+  .contact-form {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-section {
+    padding: 30px 20px 60px;
+  }
+
+  .contact-container h2 {
+    font-size: 1.9rem;
+  }
+
+  .contact-text {
+    font-size: 0.95rem;
+  }
+
+  .contact-methods {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .contact-card {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+    font-size: 0.95rem;
+  }
+
+  .contact-form button {
+    font-size: 1rem;
+    padding: 10px;
+  }
 }

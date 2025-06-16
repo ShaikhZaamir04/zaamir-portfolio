@@ -119,3 +119,58 @@
   transition: transform 0.3s ease;
   transform: scale(1.08);
 }
+
+
+@media (max-width: 992px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .project-card:hover {
+    transform: scale(1.03); /* less intense on smaller screens */
+  }
+
+  .project-content h3 {
+    font-size: 1.25rem;
+  }
+
+  .project-content p {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .projects-section {
+    padding: 30px 20px;
+  }
+
+  .projects-heading {
+    font-size: 2rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+    gap: 25px;
+  }
+
+  .project-image {
+    height: 180px;
+  }
+
+  .tech-tag {
+    font-size: 0.8rem;
+    padding: 5px 12px;
+  }
+
+  .project-links a {
+    font-size: 0.9rem;
+  }
+
+  .coming-soon h3 {
+    font-size: 1.4rem;
+  }
+
+  .coming-soon p {
+    font-size: 0.9rem;
+  }
+}

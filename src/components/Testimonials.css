@@ -17,18 +17,18 @@
 }
 
 .testimonial-card {
-  background-color: rgba(255, 255, 255, 0.05);
-  border-radius: 16px;
-  overflow: hidden;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-  transition: transform 0.4s ease, box-shadow 0.4s ease;
-  transform-style: preserve-3d;
-  perspective: 1000px;
-  padding: 20px;
-  text-align: left;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    padding: 20px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 
@@ -62,11 +62,11 @@
 }
 
 .testimonial-footer {
-  display: flex;
-  justify-content: space-between;
-  font-size: 0.85rem;
-  color: #555;
-  margin-top: auto;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.85rem;
+    color: #555;
+    margin-top: auto;
 }
 
 .testimonial-footer small {
@@ -74,4 +74,60 @@
     background: #eef3ff;
     padding: 6px 10px;
     border-radius: 20px;
+}
+
+
+@media (max-width: 992px) {
+    .testimonials-section {
+        padding: 60px 30px;
+    }
+
+    .testimonials-section h2 {
+        font-size: 2.2rem;
+    }
+
+    .testimonial-card {
+        padding: 18px;
+    }
+
+    .testimonial-header h4 {
+        font-size: 1.1rem;
+    }
+
+    .comment {
+        font-size: 0.95rem;
+    }
+
+    .testimonial-footer {
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 600px) {
+    .testimonials-section {
+        padding: 50px 20px;
+    }
+
+    .testimonials-section h2 {
+        font-size: 1.8rem;
+    }
+
+    .testimonial-card {
+        padding: 16px;
+    }
+
+    .testimonial-header h4 {
+        font-size: 1rem;
+    }
+
+    .comment {
+        font-size: 0.9rem;
+        line-height: 1.6;
+    }
+
+    .testimonial-footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+    }
 }
