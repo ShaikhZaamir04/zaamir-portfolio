@@ -1,12 +1,35 @@
-# React + Vite
+# 🌐 Zaamir's Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive personal portfolio website showcasing the work of **Zaamir**, a Full Stack Web & Game Developer.
 
-Currently, two official plugins are available:
+## 🔧 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React.js** – UI development with component-based structure
+- **Vite** – Lightning-fast build tool and development server
+- **Tailwind CSS** – Utility-first CSS for custom styling
+- **Framer Motion** – Smooth animations and transitions
+- **React Helmet Async** – Dynamic meta tags for SEO & social sharing
+- **Google Analytics 4 + Microsoft Clarity** – Tracking & user insights
 
-## Expanding the ESLint configuration
+## 🚀 Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Clean, modern & responsive UI/UX
+- Section-wise smooth scrolling
+- SEO-optimized with OG & Twitter meta tags
+- Google Analytics & Clarity integrated
+- Dark/light theme ready (optional toggle available)
+- Contact form with working submission & toasts
+- Resume download support
+
+## 📷 Open Graph Preview
+
+![Portfolio Preview](https://zaamir-portfolio.vercel.app/og-image.png)
+
+## 🔒 License & Usage
+
+This project is **not open source** and is intended for personal showcase purposes only.
+
+- **Cloning, copying, or redistributing any part of this codebase is strictly prohibited.**
+- For references or collaboration requests, please contact me directly.
+
+© 2025 Zaamir Shaikh. All rights reserved.
