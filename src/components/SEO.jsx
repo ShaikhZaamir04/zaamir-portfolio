@@ -2,7 +2,7 @@ import React from 'react';
 import { Helmet } from 'react-helmet-async';
 
 const SEO = ({
-  title = "Zaamir | Full Stack & Game Developer",
+  title = "Zaamir Shaikh | Full Stack & Game Developer",
   description = "Zaamir's personal portfolio – showcasing modern web, mobile, and game development projects.",
   image = "https://zaamir-portfolio.vercel.app/og-image.png",
   url = "https://zaamir-portfolio.vercel.app/",
