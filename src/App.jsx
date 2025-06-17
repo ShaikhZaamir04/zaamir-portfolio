@@ -9,6 +9,7 @@ import Projects from './sections/Projects';
 import Contact from './sections/Contact';
 import Footer from './components/Footer';
 import Skills from './sections/Skills';
+import Testimonials from './sections/Testimonials';
 
 ReactGA.initialize('G-GFPJZR3GR5'); // Replace with your GA4 ID
 
@@ -57,6 +58,7 @@ const App = () => {
       <About />
       <Skills />
       <Projects />
+      <Testimonials />
       <Contact />
       <Footer />
 
