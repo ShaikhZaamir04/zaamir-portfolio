@@ -10,7 +10,7 @@ const About = () => {
           <p>
             I'm <strong>Zaamir</strong>, a passionate{" "}
             <strong>Full Stack Developer</strong> and{" "}
-            <strong>Game Developer</strong> with over 3 years of software engineering experience.
+            <strong>Game Developer</strong> with over 3+ years of software engineering experience.
             I build <strong>responsive web apps</strong>,{" "}
             <strong>eCommerce stores</strong>, and{" "}
             <strong>immersive Unity-based 2D/3D games</strong>.
